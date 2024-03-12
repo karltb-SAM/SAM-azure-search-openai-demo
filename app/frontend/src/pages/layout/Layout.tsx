@@ -14,7 +14,7 @@ const Layout = () => {
             <header className={styles.header} role={"banner"}>
                 <div className={styles.headerContainer}>
                     <Link to="/" className={styles.headerTitleContainer}>
-                        <h3 className={styles.headerTitle}>Axel</h3>
+                        <h3 className={styles.headerTitle}></h3>
                     </Link>
                     <nav>
                         <ul className={styles.headerNavList}>
@@ -29,7 +29,7 @@ const Layout = () => {
                                 </NavLink>
                             </li>
                             <li className={styles.headerNavLeftMargin}>
-                                <a href="https://aka.ms/entgptsearch" target={"_blank"} title="Github repository link">
+                                <a href="https://www.me.se/" target={"_blank"} title="https://www.me.se/">
                                     <img
                                         src={github}
                                         alt="Github logo"
@@ -42,7 +42,7 @@ const Layout = () => {
                             </li>
                         </ul>
                     </nav>
-                    <h4 className={styles.headerRightText}>Azure OpenAI + AI Search</h4>
+                    <h4 className={styles.headerRightText}></h4>
                     {useLogin && <LoginButton />}
                 </div>
             </header>
