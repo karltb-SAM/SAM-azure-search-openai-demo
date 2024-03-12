@@ -50,7 +50,7 @@ class ChatReadRetrieveReadApproach(ChatApproach):
         self.query_speller = query_speller
         self.chatgpt_token_limit = get_token_limit(chatgpt_model)
 
-    @property
+    @property #UPDATE-AXEL - Uppdatera denna med en prompt som passar vår data.
     def system_message_chat_conversation(self):
         return """Assistant helps the company employees with their healthcare plan questions, and questions about the employee handbook. Be brief in your answers.
         Answer ONLY with the facts listed in the list of sources below. If there isn't enough information below, say you don't know. Do not generate answers that don't use the sources below. If asking a clarifying question to the user would help, ask the question.
@@ -129,7 +129,7 @@ class ChatReadRetrieveReadApproach(ChatApproach):
             messages=messages,  # type: ignore
             # Azure Open AI takes the deployment name as the model name
             model=self.chatgpt_deployment if self.chatgpt_deployment else self.chatgpt_model,
-            temperature=0.0,  # Minimize creativity for search query generation
+            temperature=0.0,  # Minimize creativity for search query generation - UPDATE-AXEL - Uppdatera med vilken temperatur vi vill ha. Alt ändra den andra "temperature". Vet ännu inte vilken som är korrekt
             max_tokens=100,  # Setting too low risks malformed JSON, setting too high may affect performance
             n=1,
             tools=tools,

@@ -30,7 +30,7 @@ class RetrieveThenReadApproach(Approach):
         + "If you cannot answer using the sources below, say you don't know. Use below example to answer"
     )
 
-    # shots/sample conversation
+    # shots/sample conversation - UPDATE-Axel kan uppdatera denna few shot.. Men hur?
     question = """
 'What is the deductible for the employee plan for a visit to Overlake in Bellevue?'
 
